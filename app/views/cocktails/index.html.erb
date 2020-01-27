@@ -1,0 +1,13 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1560963689-b5682b6440f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1286&q=80)">
+  List of cocktails
+</div>
+
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/800x600/?cocktail/<%= rand(500) %>)">
+    <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+  </div>
+  <%end%>
+</div>
+
+

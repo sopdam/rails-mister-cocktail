@@ -1,0 +1,14 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1560963689-b5682b6440f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1286&q=80)">
+  Add a cocktail
+</div>
+
+<div class="card-product">
+  <div class="card-product-infos">
+    <h2>Add a cocktail</h2>
+      <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name, label: 'Type the name of your cocktail'%>
+      <%= f.submit "Create cocktail"%>
+      <% end %>
+  </div>
+</div>
+

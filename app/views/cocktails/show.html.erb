@@ -1,0 +1,23 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1560963689-b5682b6440f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1286&q=80)">
+  Cocktail Name
+</div>
+
+<div class="card-product">
+  <div class="card-product-infos">
+    <h2>Add Recipe</h2>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient %>
+        <%= f.submit "Add"%>
+      <% end %>
+  </div>
+</div>
+
+<div class="card-product">
+  <div class="card-product-infos">
+    <h2>Recipe</h2>
+    <% @cocktail.doses.each do |dose| %>
+      <li> <%= dose.description %> - <%= dose.ingredient.name %> </li>
+      <% end %>
+  </div>
+</div>
